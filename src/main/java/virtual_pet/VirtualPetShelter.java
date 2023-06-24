@@ -45,7 +45,7 @@ public class VirtualPetShelter {
     }
 
     public void showPetNamesAndStats() {
-        System.out.println("Name  Description  Hunger  Happiness  Energy  Thirst");
+        System.out.println("Name      Description                    Hunger  Happiness  Energy  Thirst");
         for (VirtualPet pet : pets.values()) {
             System.out.println((addWhiteSpace(pet.getName(), 10)) + (addWhiteSpace(pet.getDescription(), 35)) 
             + (addWhiteSpace(pet.getHunger(), 8)) + (addWhiteSpace(pet.getHappiness(), 8)) 
