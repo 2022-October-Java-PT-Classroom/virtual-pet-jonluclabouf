@@ -2,6 +2,7 @@ package virtual_pet;
 
 public class VirtualPet {
     private String name;
+    private String description;
     private int hunger;
     private int thirst;
     private int energy;
@@ -9,6 +10,10 @@ public class VirtualPet {
 
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public int getHunger() {
@@ -28,20 +33,17 @@ public class VirtualPet {
     }
 
 
-// public Pet (String name, int hunger, int thirst, int energy, int happiness) {
-//     this.name = name;
-//     this.hunger = hunger;
-//     this.thirst = thirst;
-//     this.energy = energy;
-//     this.happiness = happiness;
-// }
-
-    public VirtualPet(String name) {
+    public VirtualPet(String name, String description, String animalType, String gender) {
         this.name = name;
+        this.description = description;
         this.hunger = 30;
         this.thirst = 30;
-        this.energy = 100;
-        this.happiness = 100;
+        this.energy = 90;
+        this.happiness = 80;
+    }
+
+    public VirtualPet() {
+        
     }
 
     public void feed() {
@@ -51,7 +53,21 @@ public class VirtualPet {
         happiness += 5;
     }
 
+    public void feedAll() {
+        hunger -= 10;
+        thirst += 5;
+        energy += 5;
+        happiness += 5;
+    }
+
     public void water() {
+        thirst -= 10;
+        hunger += 5;
+        energy += 5;
+        happiness += 5;
+    }
+
+    public void waterAll() {
         thirst -= 10;
         hunger += 5;
         energy += 5;

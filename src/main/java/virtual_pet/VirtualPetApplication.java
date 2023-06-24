@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class VirtualPetApplication {
 
     public static void main(String[] args) {
-        VirtualPet pet = new VirtualPet("Max");
+        VirtualPet pet = new VirtualPet("Max", "Always has something in his hair", "Dog", "Male");
 
         Scanner actions = new Scanner(System.in);
         while (true) {
